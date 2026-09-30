@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impressum — Bonsai Tracker</title>
+<script>document.documentElement.className += ' js';</script>
+<style>
+/* Shared by every legal page. The palette is the app's own: paper ground,
+   ink, clay for links, moss for the summary box. */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 20px 80px;
+  line-height: 1.6;
+  color: #16201A;
+  background: #F4F1EA;
+}
+h1 { font-size: 26px; margin-bottom: 4px; }
+h2 { font-size: 18px; margin-top: 32px; }
+h3 { font-size: 15px; margin-top: 22px; }
+.updated { color: rgba(22, 32, 26, .6); font-size: 13px; margin-bottom: 24px; }
+a { color: #C8532F; }
+code { font-size: 13px; background: #EAE5D8; padding: 1px 5px; border-radius: 4px; }
+.langbar {
+  flex-wrap: wrap; gap: 8px; margin: 0 0 28px; padding-bottom: 18px;
+  border-bottom: 1px solid #E5E0D5; font-size: 14px;
+}
+.langbar a {
+  color: #C8532F; text-decoration: none; padding: 4px 12px;
+  border: 1px solid #E5E0D5; border-radius: 999px; background: #FFFFFF;
+}
+.langbar a.active { background: #C8532F; color: #fff; border-color: #C8532F; }
+.highlight {
+  background: #E3E8DD; border: 1px solid #9BB58A; border-radius: 10px;
+  padding: 14px 16px; margin: 22px 0; font-size: 14px;
+}
+.warn {
+  background: #F5DDD4; border: 1px solid #C8532F; border-radius: 10px;
+  padding: 14px 16px; margin: 22px 0; font-size: 14px;
+}
+table { border-collapse: collapse; width: 100%; margin-top: 12px; font-size: 14px; }
+th, td { border: 1px solid #E5E0D5; padding: 8px 10px; text-align: left; vertical-align: top; }
+th { background: #EAE5D8; }
+address { font-style: normal; }
+
+/* Without JavaScript every language is simply shown one after another, so the
+   page is still complete for a crawler and for App Review. */
+html.js section[data-lang] { display: none; }
+html.js section[data-lang].active { display: block; }
+html.js .langbar { display: flex; }
+html:not(.js) .langbar { display: none; }
+</style>
+</head>
+<body>
+
+<nav class="langbar">
+  <a href="#" data-set="de" class="active">Deutsch</a>
+  <a href="#" data-set="en">English</a>
+</nav>
+
+<section data-lang="de" class="active">
+  <h1>Impressum</h1>
+  <p class="updated">Stand: 30. September 2026</p>
+
+  <h2>Angaben gemäß § 5 DDG</h2>
+  <address>
+    Jonas Polenz<br>
+    Konradstraße 15<br>
+    90429 Nürnberg<br>
+    Deutschland
+  </address>
+
+  <h2>Kontakt</h2>
+  <p>
+    E-Mail: <a href="mailto:jonas.polenz@software-development.net">jonas.polenz@software-development.net</a>
+  </p>
+
+  <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+  <address>
+    Jonas Polenz<br>
+    Konradstraße 15<br>
+    90429 Nürnberg<br>
+    Deutschland
+  </address>
+
+  <h2>Umsatzsteuer-Identifikationsnummer</h2>
+  <p>
+    Eine Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG liegt derzeit nicht vor. Nach § 5
+    Abs. 1 Nr. 6 DDG ist die Angabe nur erforderlich, sofern eine solche Nummer vorhanden ist.
+  </p>
+
+  <h2>Streitbeilegung</h2>
+  <p>
+    Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
+    <a href="https://ec.europa.eu/consumers/odr/">https://ec.europa.eu/consumers/odr/</a>.
+    Ich bin nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer
+    Verbraucherschlichtungsstelle teilzunehmen.
+  </p>
+
+  <h2>Haftung für Inhalte und Links</h2>
+  <p>
+    Als Diensteanbieter bin ich gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den
+    allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG bin ich als Diensteanbieter jedoch
+    nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach
+    Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Für die Inhalte
+    verlinkter externer Seiten ist stets deren Betreiber verantwortlich.
+  </p>
+
+  <h2>App-Vertrieb</h2>
+  <p>
+    Die App „Bonsai Tracker“ wird über den Apple App Store vertrieben. Vertragspartner für den
+    Kauf und für In-App-Käufe ist Apple. Einzelheiten regeln die
+    <a href="terms.html">Nutzungsbedingungen</a>.
+  </p>
+
+  <h2>Wetterdaten</h2>
+  <p>
+    Die Wettervorhersage in der App stammt von  Weather. Rechtliche Hinweise dazu:
+    <a href="https://weatherkit.apple.com/legal-attribution.html">weatherkit.apple.com/legal-attribution.html</a>.
+  </p>
+</section>
+
+<section data-lang="en">
+  <h1>Legal Notice</h1>
+  <p class="updated">Last updated: 30 September 2026</p>
+
+  <h2>Information pursuant to § 5 DDG (German Digital Services Act)</h2>
+  <address>
+    Jonas Polenz<br>
+    Konradstraße 15<br>
+    90429 Nürnberg<br>
+    Germany
+  </address>
+
+  <h2>Contact</h2>
+  <p>
+    Email: <a href="mailto:jonas.polenz@software-development.net">jonas.polenz@software-development.net</a>
+  </p>
+
+  <h2>Responsible for content pursuant to § 18(2) MStV</h2>
+  <address>
+    Jonas Polenz<br>
+    Konradstraße 15<br>
+    90429 Nürnberg<br>
+    Germany
+  </address>
+
+  <h2>VAT identification number</h2>
+  <p>
+    No VAT identification number pursuant to § 27a UStG exists at present. Under § 5(1) no. 6 DDG
+    the information is required only where such a number exists.
+  </p>
+
+  <h2>Dispute resolution</h2>
+  <p>
+    The European Commission provides a platform for online dispute resolution (ODR):
+    <a href="https://ec.europa.eu/consumers/odr/">https://ec.europa.eu/consumers/odr/</a>.
+    I am neither willing nor obliged to participate in dispute resolution proceedings before a
+    consumer arbitration board.
+  </p>
+
+  <h2>Liability for content and links</h2>
+  <p>
+    As a service provider I am responsible for my own content on these pages under the general laws
+    pursuant to § 7(1) DDG. Under §§ 8 to 10 DDG, however, I am not obliged as a service provider
+    to monitor transmitted or stored third-party information, or to investigate circumstances that
+    indicate unlawful activity. The operator of a linked external page is always responsible for
+    its content.
+  </p>
+
+  <h2>App distribution</h2>
+  <p>
+    The app “Bonsai Tracker” is distributed through the Apple App Store. Apple is the contractual
+    partner for the purchase and for in-app purchases. Details are set out in the
+    <a href="terms.html">Terms of Use</a>.
+  </p>
+
+  <h2>Weather data</h2>
+  <p>
+    The weather forecast in the app is provided by  Weather. Legal attribution:
+    <a href="https://weatherkit.apple.com/legal-attribution.html">weatherkit.apple.com/legal-attribution.html</a>.
+  </p>
+</section>
+
+<script>
+  document.querySelectorAll('.langbar a').forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
+      var lang = link.dataset.set;
+      document.querySelectorAll('.langbar a').forEach(function (l) { l.classList.toggle('active', l === link); });
+      document.querySelectorAll('section[data-lang]').forEach(function (s) {
+        s.classList.toggle('active', s.dataset.lang === lang);
+      });
+      document.documentElement.lang = lang;
+    });
+  });
+</script>
+</body>
+</html>

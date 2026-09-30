@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Datenschutzerklärung — Bonsai Tracker</title>
+<script>document.documentElement.className += ' js';</script>
+<style>
+/* Shared by every legal page. The palette is the app's own: paper ground,
+   ink, clay for links, moss for the summary box. */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 20px 80px;
+  line-height: 1.6;
+  color: #16201A;
+  background: #F4F1EA;
+}
+h1 { font-size: 26px; margin-bottom: 4px; }
+h2 { font-size: 18px; margin-top: 32px; }
+h3 { font-size: 15px; margin-top: 22px; }
+.updated { color: rgba(22, 32, 26, .6); font-size: 13px; margin-bottom: 24px; }
+a { color: #C8532F; }
+code { font-size: 13px; background: #EAE5D8; padding: 1px 5px; border-radius: 4px; }
+.langbar {
+  flex-wrap: wrap; gap: 8px; margin: 0 0 28px; padding-bottom: 18px;
+  border-bottom: 1px solid #E5E0D5; font-size: 14px;
+}
+.langbar a {
+  color: #C8532F; text-decoration: none; padding: 4px 12px;
+  border: 1px solid #E5E0D5; border-radius: 999px; background: #FFFFFF;
+}
+.langbar a.active { background: #C8532F; color: #fff; border-color: #C8532F; }
+.highlight {
+  background: #E3E8DD; border: 1px solid #9BB58A; border-radius: 10px;
+  padding: 14px 16px; margin: 22px 0; font-size: 14px;
+}
+.warn {
+  background: #F5DDD4; border: 1px solid #C8532F; border-radius: 10px;
+  padding: 14px 16px; margin: 22px 0; font-size: 14px;
+}
+table { border-collapse: collapse; width: 100%; margin-top: 12px; font-size: 14px; }
+th, td { border: 1px solid #E5E0D5; padding: 8px 10px; text-align: left; vertical-align: top; }
+th { background: #EAE5D8; }
+address { font-style: normal; }
+
+/* Without JavaScript every language is simply shown one after another, so the
+   page is still complete for a crawler and for App Review. */
+html.js section[data-lang] { display: none; }
+html.js section[data-lang].active { display: block; }
+html.js .langbar { display: flex; }
+html:not(.js) .langbar { display: none; }
+</style>
+</head>
+<body>
+
+<nav class="langbar">
+  <a href="#" data-set="de" class="active">Deutsch</a>
+  <a href="#" data-set="en">English</a>
+</nav>
+
+<section data-lang="de" class="active">
+  <h1>Datenschutzerklärung</h1>
+  <p class="updated">Stand: 30. September 2026 · gilt für die iOS-App „Bonsai Tracker“</p>
+
+  <div class="highlight">
+    <strong>Kurzfassung:</strong> Deine Bäume, dein Pflegetagebuch und deine Fotos bleiben auf
+    deinem Gerät. Es gibt kein Benutzerkonto, keine Werbung, kein Tracking und
+    <strong>keine Nutzungsstatistik</strong> – auch keine anonyme. Dein Gerät verlassen nur:
+    eine ungefähre Ortsangabe für die optionale Wettervorhersage (an Apple), Kaufinformationen
+    für die Abo-Verwaltung (an Apple und RevenueCat) und ein Foto, das du ausdrücklich zum Scan
+    gibst – es wird für die Dauer der Auswertung verarbeitet und danach verworfen. Der Lichtmesser
+    misst nur die Belichtung der Kamera; dabei entsteht kein Bild.
+  </div>
+
+  <h2>1. Verantwortlicher</h2>
+  <address>
+    Jonas Polenz<br>
+    Konradstraße 15<br>
+    90429 Nürnberg<br>
+    Deutschland<br>
+    E-Mail: <a href="mailto:jonas.polenz@software-development.net">jonas.polenz@software-development.net</a>
+  </address>
+
+  <h2>2. Welche Daten verarbeitet werden und warum</h2>
+
+  <h3>2.1 Deine Baumdaten (nur auf dem Gerät)</h3>
+  <p>
+    Alles, was du in der App anlegst – Bäume, Arten, Stil und Größe, Standort im Sinne von
+    „drinnen/draußen“, Substrat, Topfgröße, Alter, erledigte und verschobene Pflegeschritte,
+    Arbeiten ohne Termin, Notizen, Fotos, Gesundheitswerte und Lichtmessungen – wird
+    ausschließlich lokal im App-Container deines Geräts gespeichert. Ein Teil davon (die heute
+    fälligen Aufgaben und der zuletzt bekannte Wetterstand) liegt zusätzlich in einer
+    App-Gruppe, damit das Widget ihn anzeigen kann; auch das bleibt auf dem Gerät. Diese Daten
+    werden nicht an mich übertragen.
+    Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Erfüllung des Nutzungsvertrags).
+  </p>
+  <p>
+    <strong>Es findet keine iCloud-Synchronisation statt.</strong> Deine Daten liegen auf genau
+    dem Gerät, auf dem du sie eingegeben hast. Sie sind jedoch in einem regulären
+    iOS-Gerätebackup enthalten, wenn du ein solches erstellst; dafür gelten die
+    Datenschutzbestimmungen von Apple.
+  </p>
+
+  <h3>2.2 Fotos und Kamera</h3>
+  <p>
+    Du kannst Fotos aufnehmen oder aus deiner Mediathek auswählen, um sie an einen Baum oder an
+    einen Tagebucheintrag zu hängen. Der Zugriff erfolgt nur nach deiner ausdrücklichen Freigabe
+    durch iOS und nur für das jeweils von dir gewählte Bild. Die Fotos werden im App-Container
+    gespeichert und nicht an mich oder Dritte übertragen. Eine Ausnahme gibt es nur, wenn du ein
+    Bild ausdrücklich zum Scan gibst – siehe 2.6.
+    Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO.
+  </p>
+  <p>
+    Beim Freistellen des Baums vom Hintergrund wird das Bild mit Apples Vision-Framework
+    ausschließlich auf deinem Gerät verarbeitet. Dabei wird nichts übertragen.
+  </p>
+
+  <h3>2.3 Lichtmesser</h3>
+  <p>
+    Der Lichtmesser nutzt die Kamera, liest aber nur aus, wie sie sich gerade belichtet –
+    Blende, ISO-Wert und Belichtungszeit. <strong>Es wird kein Bild aufgenommen, gespeichert
+    oder übertragen.</strong> Aus diesen drei Zahlen wird auf dem Gerät ein Helligkeitswert
+    berechnet. Gespeichert wird nur dieser Wert, bei dem Baum, für den du gemessen hast.
+    Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO.
+  </p>
+
+  <h3>2.4 Standort und Wettervorhersage (optional)</h3>
+  <p>
+    Die wetterabhängige Anpassung der Gießabstände und die Frostwarnung sind standardmäßig
+    deaktiviert. Wenn du sie einschaltest und iOS die Ortungsfreigabe erteilst, ermittelt die App
+    deinen ungefähren Standort mit bewusst reduzierter Genauigkeit
+    (<code>kCLLocationAccuracyKilometer</code>, also etwa ein Kilometer) und ruft damit die
+    Vorhersage bei <strong>Apple WeatherKit</strong> ab. Die Abfrage erfolgt höchstens alle sechs
+    Stunden und nur, wenn sich das Gerät um mehr als zehn Kilometer bewegt hat oder der
+    zwischengespeicherte Wert abgelaufen ist.
+  </p>
+  <p>
+    Der Standort geht dabei an Apple als Betreiber des Wetterdienstes; er wird
+    <strong>nicht an mich übertragen</strong> und berührt meinen Server in keiner Weise. Auf dem
+    Gerät wird er nur als zuletzt bekannter Wert vorgehalten und mit jeder Abfrage überschrieben.
+    Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung durch Aktivieren der Funktion und
+    Erteilen der iOS-Ortungsfreigabe). Du kannst die Ortungsfreigabe jederzeit in den
+    iOS-Einstellungen entziehen.
+  </p>
+
+  <h3>2.5 Zufällige Installations-Kennung für den Scan-Dienst</h3>
+  <p>
+    Damit der Bilderkennungs-Dienst nicht von fremden Programmen missbraucht werden kann und
+    damit sich die kostenlosen Scans abzählen lassen, erzeugt die App bei der ersten Verwendung
+    eine <strong>zufällige Kennung</strong> (eine UUID) und legt sie im Schlüsselbund deines
+    Geräts ab. Sie wird von der App selbst erzeugt: Es ist <em>keine</em> Werbe-ID (IDFA), keine
+    Apple-ID, keine Geräte-Seriennummer und keine Kennung, die andere Apps ebenfalls sehen.
+  </p>
+  <p>
+    Bei der Anmeldung am Dienst werden diese Kennung sowie Plattform („ios“), App-Version,
+    Sprachkennung und Länderkennung deines Geräts an einen von mir betriebenen Cloudflare Worker
+    übertragen und dort gespeichert. Sie dienen ausschließlich dazu, die Anfrage zuzuordnen, das
+    Scan-Kontingent zu führen und ein aktives Abo zu erkennen.
+    Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO sowie Art. 6 Abs. 1 lit. f DSGVO (Schutz des
+    Dienstes vor missbräuchlicher Nutzung).
+  </p>
+
+  <h3>2.6 Scan: Arterkennung und Zustandseinschätzung</h3>
+  <p>
+    Nur wenn du ein Foto ausdrücklich zum Scan gibst – und nur für dieses eine Bild – verlässt ein
+    Foto dein Gerät. Vor dem Versand wird es auf dem Gerät auf höchstens 1536 Pixel an der langen
+    Kante verkleinert und als JPEG neu kodiert. <strong>Dabei gehen die EXIF-Daten der Kamera
+    einschließlich etwaiger GPS-Koordinaten verloren</strong>, weil das Bild vollständig neu
+    gezeichnet wird. Mitgesendet werden die Liste der Arten, die dieser App-Stand kennt, und –
+    bei der Zustandseinschätzung – eine kurze technische Beschreibung des Baums (Art,
+    drinnen/draußen, Substrat, Topfgröße, Altersband). Kein Name, keine Kontaktdaten, keine
+    Standortdaten.
+  </p>
+  <p>
+    Die Verarbeitung erfolgt auf einem von mir betriebenen Cloudflare Worker, der das Bild an ein
+    Bildmodell in der Cloudflare-Infrastruktur weiterreicht und eine strukturierte Auswertung
+    zurückgibt. <strong>Das Foto wird dabei nicht dauerhaft gespeichert, nicht protokolliert und
+    nicht zum Training von Modellen verwendet.</strong> Es besteht für die Dauer der Anfrage und
+    wird danach verworfen.
+  </p>
+  <p>
+    Gespeichert werden nur zwei Dinge. Erstens ein <strong>kryptografischer Fingerabdruck</strong>
+    (SHA-256) der Bilddaten zusammen mit der erkannten Art, 30 Tage lang, damit dasselbe Bild
+    nicht zweimal ausgewertet werden muss. Aus dem Fingerabdruck lässt sich das Bild nicht
+    zurückgewinnen, und er ist keiner Kennung und keinem Gerät zugeordnet. Zweitens der
+    <strong>Zeitpunkt des Scans</strong> bei deiner Installations-Kennung (2.5), damit sich das
+    kostenlose Kontingent über ein rollendes Fenster von 30 Tagen abzählen lässt; ältere
+    Zeitpunkte werden verworfen.
+    Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO – die Auswertung ist genau die Leistung, die du
+    mit dem Antippen angefordert hast.
+  </p>
+
+  <h3>2.7 Käufe und Abonnements</h3>
+  <p>
+    Der Kauf von „Pro“ läuft über den Apple App Store. Apple wickelt Zahlung und Abrechnung ab;
+    ich erhalte von Apple keine Zahlungsdaten, sondern lediglich aggregierte Verkaufsstatistiken
+    ohne Personenbezug.
+  </p>
+  <p>
+    Zur Prüfung und Verwaltung des Abo-Status setze ich <strong>RevenueCat</strong> als
+    Auftragsverarbeiter ein. Dabei werden eine von RevenueCat vergebene, zufällige
+    App-Nutzer-Kennung sowie der von Apple ausgestellte Kaufbeleg verarbeitet. Es werden keine
+    E-Mail-Adressen, Namen oder Zahlungsdaten an RevenueCat übermittelt. RevenueCat meldet den
+    Abo-Status an meinen Cloudflare Worker; dort wird zur Installations-Kennung aus 2.5 lediglich
+    vermerkt, <em>ob</em> ein Abo aktiv ist, sowie die RevenueCat-Kennung, um beide einander
+    zuordnen zu können. Zweck ist es, freigeschaltete Funktionen korrekt zuzuordnen und Käufe
+    wiederherstellen zu können.
+    Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO.
+  </p>
+
+  <h3>2.8 Mitteilungen</h3>
+  <p>
+    Alle Erinnerungen – fällige Pflegeschritte, Frostwarnung, Hinweis vor dem Ende einer
+    Testphase – sind <em>lokale</em> Mitteilungen, die dein Gerät selbst plant. Es gibt keinen
+    Push-Server und keine Übertragung an mich. Die Freigabe erteilst du über iOS und kannst sie
+    dort jederzeit widerrufen.
+  </p>
+
+  <h3>2.9 IP-Adresse</h3>
+  <p>
+    Jede Anfrage an meinen Dienst enthält technisch bedingt die IP-Adresse deines Anschlusses.
+    Sie wird ausschließlich als Zählschlüssel einer Missbrauchsbremse verwendet: Bei der
+    erstmaligen Anmeldung eines Geräts wird gezählt, wie viele Anmeldungen aus derselben Adresse
+    innerhalb eines kurzen Zeitfensters kommen. Dieser Zähler läuft nach wenigen Minuten
+    automatisch ab. <strong>Es werden keine Zugriffsprotokolle geführt</strong>, in denen
+    IP-Adressen mit Anfragen, Bildern oder Kennungen zusammengeführt würden.
+    Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (Schutz des Dienstes vor missbräuchlicher
+    Nutzung).
+  </p>
+
+  <h2>3. Keine Werbung, kein Tracking, keine Nutzungsstatistik</h2>
+  <p>
+    Bonsai Tracker enthält keine Werbung, kein Crash-Reporting-SDK, keine Social-Media-Plugins
+    und kein geräteübergreifendes Tracking. Es wird keine Werbe-ID (IDFA) verwendet und kein
+    App-Tracking-Transparency-Dialog angezeigt, weil kein Tracking stattfindet. Ein Analyse-SDK
+    eines Drittanbieters ist nicht eingebunden.
+  </p>
+  <p>
+    Darüber hinaus werden <strong>überhaupt keine Nutzungsdaten erhoben</strong> – auch keine
+    anonymen Zählerstände darüber, welche Bildschirme du siehst oder welche Knöpfe du drückst.
+    Die App misst nicht, wie sie benutzt wird.
+  </p>
+
+  <h2>4. Empfänger und Auftragsverarbeiter</h2>
+  <table>
+    <tr><th>Empfänger</th><th>Zweck</th><th>Übermittelte Daten</th></tr>
+    <tr>
+      <td>Apple Inc. / Apple Distribution International Ltd.</td>
+      <td>App-Vertrieb, Kaufabwicklung, Wettervorhersage (WeatherKit)</td>
+      <td>Kauf- und Kontodaten im Rahmen deines Apple-Kontos; bei aktivierter Wetterfunktion die auf etwa einen Kilometer genaue Ortsangabe</td>
+    </tr>
+    <tr>
+      <td>RevenueCat, Inc. (USA)</td>
+      <td>Verwaltung des Abo-Status, Wiederherstellung von Käufen</td>
+      <td>zufällige App-Nutzer-Kennung, Apple-Kaufbeleg</td>
+    </tr>
+    <tr>
+      <td>Cloudflare, Inc. (USA) — Worker, Key-Value-Speicher und Bildmodell</td>
+      <td>Arterkennung und Zustandseinschätzung (2.6), Führung des Scan-Kontingents (2.5), Missbrauchsbremse (2.9)</td>
+      <td>das übermittelte Foto (nur für die Dauer der Anfrage), technische Angaben zum Baum, die zufällige Installations-Kennung, Plattform, App-Version, Sprach- und Länderkennung, der Abo-Status, die IP-Adresse als kurzlebiger Zählschlüssel</td>
+    </tr>
+  </table>
+  <p>
+    Für Übermittlungen in die USA stützen sich RevenueCat und Cloudflare auf die
+    Standardvertragsklauseln der EU-Kommission bzw. auf das EU-US Data Privacy Framework.
+  </p>
+
+  <h2>5. Speicherdauer</h2>
+  <p>
+    Deine Baumdaten bleiben gespeichert, bis du sie in der App löschst oder die App
+    deinstallierst; beim Deinstallieren werden die lokalen Daten von iOS entfernt. Der Standort
+    wird nur als letzter bekannter Wert vorgehalten und mit jeder Abfrage überschrieben.
+  </p>
+  <p>
+    Der Datensatz zu deiner Installations-Kennung (2.5) wird gelöscht, wenn das Gerät den Dienst
+    400 Tage lang nicht verwendet hat; er läuft automatisch ab. Die Scan-Zeitpunkte verfallen
+    nach etwa 35 Tagen, der Fingerabdruck eines Bildes nach 30 Tagen, der Zählschlüssel der
+    Missbrauchsbremse nach wenigen Minuten. Ein zum Scan übermitteltes Foto wird nicht
+    gespeichert: Es besteht nur für die Dauer der Anfrage und wird danach verworfen; auch in
+    Protokollen wird es nicht abgelegt. Bei RevenueCat gespeicherte Kaufinformationen werden für
+    die Dauer des Abos und darüber hinaus im Rahmen der handels- und steuerrechtlichen Pflichten
+    aufbewahrt.
+  </p>
+
+  <h2>6. Deine Rechte</h2>
+  <p>
+    Du hast das Recht auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17),
+    Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch
+    (Art. 21 DSGVO). Erteilte Einwilligungen kannst du jederzeit mit Wirkung für die Zukunft
+    widerrufen.
+  </p>
+  <p>
+    Deine Baumdaten liegen ausschließlich bei dir; zu ihnen kann ich weder Auskunft geben noch
+    sie löschen, weil ich keinen Zugriff darauf habe. Über „Sammlung exportieren“ in den
+    Einstellungen kannst du jederzeit selbst eine vollständige Kopie aller Bäume und Tagebücher
+    als JSON-Datei erstellen. Für die serverseitig gespeicherte Installations-Kennung (2.5)
+    genügt eine E-Mail an die oben genannte Adresse; der Datensatz wird dann gelöscht.
+  </p>
+  <p>
+    Dir steht zudem ein Beschwerderecht bei einer Aufsichtsbehörde zu, etwa beim Bayerischen
+    Landesamt für Datenschutzaufsicht (BayLDA), Promenade 18, 91522 Ansbach.
+  </p>
+
+  <h2>7. Kinder</h2>
+  <p>
+    Bonsai Tracker richtet sich nicht an Kinder unter 16 Jahren. Es werden wissentlich keine
+    Daten von Kindern erhoben.
+  </p>
+
+  <h2>8. Änderungen dieser Erklärung</h2>
+  <p>
+    Diese Erklärung wird angepasst, wenn sich Funktionen oder Rechtslage ändern. Maßgeblich ist
+    die jeweils hier veröffentlichte Fassung mit dem oben genannten Stand.
+  </p>
+
+  <h2>9. Sprachfassungen</h2>
+  <p>
+    Diese Erklärung liegt auf Deutsch und Englisch vor. Bei Abweichungen ist die deutsche Fassung
+    maßgeblich.
+  </p>
+</section>
+
+<section data-lang="en">
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: 30 September 2026 · applies to the iOS app “Bonsai Tracker”</p>
+
+  <div class="highlight">
+    <strong>In short:</strong> your trees, your care journal and your photos stay on your device.
+    There is no account, no advertising, no tracking and <strong>no usage analytics</strong> — not
+    even anonymous counters. The only things that leave your device are: an approximate location
+    for the optional weather forecast (to Apple), purchase information for subscription management
+    (to Apple and RevenueCat), and a photo you explicitly submit for a scan — it is processed for
+    the duration of the request and then discarded. The light meter only reads the camera's
+    exposure; no image is produced.
+  </div>
+
+  <h2>1. Controller</h2>
+  <address>
+    Jonas Polenz<br>
+    Konradstraße 15<br>
+    90429 Nürnberg<br>
+    Germany<br>
+    Email: <a href="mailto:jonas.polenz@software-development.net">jonas.polenz@software-development.net</a>
+  </address>
+
+  <h2>2. What is processed and why</h2>
+
+  <h3>2.1 Your tree data (on the device only)</h3>
+  <p>
+    Everything you create in the app — trees, species, style and size, indoor or outdoor
+    placement, substrate, pot size, age, completed and postponed care steps, unscheduled work,
+    notes, photos, health scores and light readings — is stored solely in the app's container on
+    your device. A small part of it (today's due tasks and the last known weather) is also kept
+    in an app group so the widget can display it; that too stays on the device. None of it is
+    transmitted to me. Legal basis: Art. 6(1)(b) GDPR (performance of the contract).
+  </p>
+  <p>
+    <strong>There is no iCloud synchronisation.</strong> Your data lives on exactly the device you
+    entered it on. It is, however, included in a normal iOS device backup if you make one; Apple's
+    privacy terms apply to that.
+  </p>
+
+  <h3>2.2 Photos and camera</h3>
+  <p>
+    You can take photos or pick them from your library to attach to a tree or a journal entry.
+    Access happens only after you grant it through iOS and only for the image you select. Photos
+    are stored in the app container and are not transmitted to me or to third parties. The single
+    exception is a photo you explicitly submit for a scan — see 2.6.
+    Legal basis: Art. 6(1)(b) GDPR.
+  </p>
+  <p>
+    Cutting the tree out from its background is done with Apple's Vision framework entirely on
+    your device. Nothing is transmitted.
+  </p>
+
+  <h3>2.3 Light meter</h3>
+  <p>
+    The light meter uses the camera but reads only how it is currently exposing — aperture, ISO
+    and shutter speed. <strong>No image is captured, stored or transmitted.</strong> A brightness
+    value is calculated from those three numbers on the device. Only that value is stored, against
+    the tree you measured for. Legal basis: Art. 6(1)(b) GDPR.
+  </p>
+
+  <h3>2.4 Location and weather forecast (optional)</h3>
+  <p>
+    Weather-adjusted watering intervals and frost warnings are off by default. If you switch them
+    on and grant iOS location access, the app determines your approximate location at deliberately
+    reduced accuracy (<code>kCLLocationAccuracyKilometer</code>, roughly one kilometre) and uses
+    it to request a forecast from <strong>Apple WeatherKit</strong>. The request happens at most
+    every six hours, and only when the device has moved more than ten kilometres or the cached
+    value has expired.
+  </p>
+  <p>
+    The location goes to Apple as the operator of the weather service; it is
+    <strong>not transmitted to me</strong> and never touches my server. On the device it is kept
+    only as the last known value and overwritten with every request. Legal basis: Art. 6(1)(a)
+    GDPR (consent, given by enabling the feature and granting iOS location access). You can
+    withdraw location access at any time in iOS Settings.
+  </p>
+
+  <h3>2.5 A random install identifier for the scan service</h3>
+  <p>
+    So that the image recognition service cannot be abused by other programs, and so free scans
+    can be counted, the app generates a <strong>random identifier</strong> (a UUID) on first use
+    and keeps it in your device's keychain. The app generates it itself: it is <em>not</em> an
+    advertising identifier (IDFA), not an Apple ID, not a device serial number, and not an
+    identifier any other app can see.
+  </p>
+  <p>
+    When registering with the service, that identifier together with the platform (“ios”), the app
+    version, and your device's language and country codes is transmitted to a Cloudflare Worker
+    operated by me and stored there. They serve only to attribute the request, to maintain the
+    scan allowance and to recognise an active subscription. Legal basis: Art. 6(1)(b) GDPR and
+    Art. 6(1)(f) GDPR (protecting the service against abuse).
+  </p>
+
+  <h3>2.6 Scan: species identification and condition assessment</h3>
+  <p>
+    Only when you explicitly submit a photo for a scan — and only for that one image — does a photo
+    leave your device. Before sending, it is resized on the device to at most 1536 pixels on the
+    long edge and re-encoded as JPEG. <strong>This discards the camera's EXIF data including any
+    GPS coordinates</strong>, because the image is redrawn from scratch. Sent along with it are the
+    list of species this build of the app knows and — for a condition assessment — a short
+    technical description of the tree (species, indoor or outdoor, substrate, pot size, age band).
+    No name, no contact details, no location data.
+  </p>
+  <p>
+    Processing happens on a Cloudflare Worker operated by me, which passes the image to a vision
+    model within Cloudflare's infrastructure and returns a structured assessment. <strong>The photo
+    is not stored permanently, not logged, and not used to train models.</strong> It exists for the
+    duration of the request and is discarded afterwards.
+  </p>
+  <p>
+    Only two things are stored. First, a <strong>cryptographic fingerprint</strong> (SHA-256) of
+    the image bytes together with the species recognised, for 30 days, so the same image does not
+    have to be evaluated twice. The image cannot be recovered from the fingerprint, and the
+    fingerprint is not linked to any identifier or device. Second, the <strong>time of the
+    scan</strong>, against your install identifier (2.5), so the free allowance can be counted over
+    a rolling 30-day window; older timestamps are discarded. Legal basis: Art. 6(1)(b) GDPR — the
+    assessment is precisely the service you asked for by tapping.
+  </p>
+
+  <h3>2.7 Purchases and subscriptions</h3>
+  <p>
+    “Pro” is purchased through the Apple App Store. Apple handles payment and billing; I receive no
+    payment data from Apple, only aggregated sales statistics with no personal reference.
+  </p>
+  <p>
+    To check and manage subscription status I use <strong>RevenueCat</strong> as a processor. A
+    random app user identifier assigned by RevenueCat and the receipt issued by Apple are processed
+    in doing so. No email addresses, names or payment data are transmitted to RevenueCat.
+    RevenueCat reports subscription status to my Cloudflare Worker, where all that is recorded
+    against the install identifier from 2.5 is <em>whether</em> a subscription is active, plus the
+    RevenueCat identifier so the two can be matched. The purpose is to unlock the right features
+    and to allow purchases to be restored. Legal basis: Art. 6(1)(b) GDPR.
+  </p>
+
+  <h3>2.8 Notifications</h3>
+  <p>
+    All reminders — due care steps, frost warnings, a note before a trial ends — are
+    <em>local</em> notifications scheduled by your device itself. There is no push server and
+    nothing is transmitted to me. You grant permission through iOS and can withdraw it there at
+    any time.
+  </p>
+
+  <h3>2.9 IP address</h3>
+  <p>
+    For technical reasons every request to my service carries your connection's IP address. It is
+    used solely as the counter key for an abuse brake: when a device first registers, the number of
+    registrations from the same address within a short window is counted. That counter expires
+    automatically after a few minutes. <strong>No access logs are kept</strong> that would combine
+    IP addresses with requests, images or identifiers. Legal basis: Art. 6(1)(f) GDPR (protecting
+    the service against abuse).
+  </p>
+
+  <h2>3. No advertising, no tracking, no usage analytics</h2>
+  <p>
+    Bonsai Tracker contains no advertising, no crash-reporting SDK, no social media plugins and no
+    cross-device tracking. No advertising identifier (IDFA) is used and no App Tracking
+    Transparency dialog is shown, because no tracking takes place. No third-party analytics SDK is
+    embedded.
+  </p>
+  <p>
+    Beyond that, <strong>no usage data is collected at all</strong> — not even anonymous counters of
+    which screens you see or which buttons you press. The app does not measure how it is used.
+  </p>
+
+  <h2>4. Recipients and processors</h2>
+  <table>
+    <tr><th>Recipient</th><th>Purpose</th><th>Data transmitted</th></tr>
+    <tr>
+      <td>Apple Inc. / Apple Distribution International Ltd.</td>
+      <td>App distribution, purchase processing, weather forecast (WeatherKit)</td>
+      <td>purchase and account data within your Apple account; with the weather feature enabled, a location accurate to roughly one kilometre</td>
+    </tr>
+    <tr>
+      <td>RevenueCat, Inc. (USA)</td>
+      <td>Subscription status management, restoring purchases</td>
+      <td>random app user identifier, Apple receipt</td>
+    </tr>
+    <tr>
+      <td>Cloudflare, Inc. (USA) — Worker, key-value store and vision model</td>
+      <td>Species identification and condition assessment (2.6), scan allowance (2.5), abuse brake (2.9)</td>
+      <td>the submitted photo (for the duration of the request only), technical details about the tree, the random install identifier, platform, app version, language and country codes, subscription status, the IP address as a short-lived counter key</td>
+    </tr>
+  </table>
+  <p>
+    For transfers to the USA, RevenueCat and Cloudflare rely on the European Commission's standard
+    contractual clauses and/or the EU-US Data Privacy Framework.
+  </p>
+
+  <h2>5. Retention</h2>
+  <p>
+    Your tree data stays stored until you delete it in the app or uninstall the app; uninstalling
+    removes the local data through iOS. The location is kept only as the last known value and
+    overwritten with every request.
+  </p>
+  <p>
+    The record for your install identifier (2.5) is deleted when the device has not used the
+    service for 400 days; it expires automatically. Scan timestamps expire after about 35 days, an
+    image fingerprint after 30 days, and the abuse brake's counter key after a few minutes. A photo
+    submitted for a scan is not stored: it exists only for the duration of the request and is
+    discarded afterwards; it is not written to logs either. Purchase information held by RevenueCat
+    is retained for the term of the subscription and beyond that within commercial and tax
+    retention obligations.
+  </p>
+
+  <h2>6. Your rights</h2>
+  <p>
+    You have the right of access (Art. 15), rectification (Art. 16), erasure (Art. 17),
+    restriction of processing (Art. 18), data portability (Art. 20) and objection (Art. 21 GDPR).
+    You may withdraw any consent at any time with effect for the future.
+  </p>
+  <p>
+    Your tree data resides only with you; I can neither provide information about it nor delete it,
+    because I have no access to it. Using “Export collection” in Settings you can create a complete
+    copy of every tree and journal as a JSON file at any time. For the install identifier stored on
+    the server (2.5), an email to the address above is enough and the record will be deleted.
+  </p>
+  <p>
+    You also have the right to lodge a complaint with a supervisory authority, for example the
+    Bavarian Data Protection Authority (BayLDA), Promenade 18, 91522 Ansbach, Germany.
+  </p>
+
+  <h2>7. Children</h2>
+  <p>
+    Bonsai Tracker is not directed at children under 16. No data from children is knowingly
+    collected.
+  </p>
+
+  <h2>8. Changes to this policy</h2>
+  <p>
+    This policy will be adjusted when features or the legal situation change. The version published
+    here, bearing the date above, is the authoritative one.
+  </p>
+
+  <h2>9. Language versions</h2>
+  <p>
+    This policy exists in German and English. In case of discrepancies, the German version
+    prevails.
+  </p>
+</section>
+
+<script>
+  document.querySelectorAll('.langbar a').forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
+      var lang = link.dataset.set;
+      document.querySelectorAll('.langbar a').forEach(function (l) { l.classList.toggle('active', l === link); });
+      document.querySelectorAll('section[data-lang]').forEach(function (s) {
+        s.classList.toggle('active', s.dataset.lang === lang);
+      });
+      document.documentElement.lang = lang;
+    });
+  });
+</script>
+</body>
+</html>
