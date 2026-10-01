@@ -62,15 +62,16 @@ html:not(.js) .langbar { display: none; }
 
 <section data-lang="de" class="active">
   <h1>Datenschutzerklärung</h1>
-  <p class="updated">Stand: 30. September 2026 · gilt für die iOS-App „Bonsai Tracker“</p>
+  <p class="updated">Stand: 1. Oktober 2026 · gilt für die iOS-App „Bonsai Tracker“</p>
 
   <div class="highlight">
     <strong>Kurzfassung:</strong> Deine Bäume, dein Pflegetagebuch und deine Fotos bleiben auf
     deinem Gerät. Es gibt kein Benutzerkonto, keine Werbung, kein Tracking und
     <strong>keine Nutzungsstatistik</strong> – auch keine anonyme. Dein Gerät verlassen nur:
     eine ungefähre Ortsangabe für die optionale Wettervorhersage (an Apple), Kaufinformationen
-    für die Abo-Verwaltung (an Apple und RevenueCat) und ein Foto, das du ausdrücklich zum Scan
-    gibst – es wird für die Dauer der Auswertung verarbeitet und danach verworfen. Der Lichtmesser
+    für die Abo-Verwaltung (an Apple und RevenueCat) und Fotos deiner Bäume – beim Scan, den du
+    ausdrücklich anstößt, und beim Freistellen des Baums vom Hintergrund. Beide werden nur für
+    die Dauer der Anfrage verarbeitet und danach verworfen. Der Lichtmesser
     misst nur die Belichtung der Kamera; dabei entsteht kein Bild.
   </div>
 
@@ -108,13 +109,27 @@ html:not(.js) .langbar { display: none; }
     Du kannst Fotos aufnehmen oder aus deiner Mediathek auswählen, um sie an einen Baum oder an
     einen Tagebucheintrag zu hängen. Der Zugriff erfolgt nur nach deiner ausdrücklichen Freigabe
     durch iOS und nur für das jeweils von dir gewählte Bild. Die Fotos werden im App-Container
-    gespeichert und nicht an mich oder Dritte übertragen. Eine Ausnahme gibt es nur, wenn du ein
-    Bild ausdrücklich zum Scan gibst – siehe 2.6.
+    gespeichert und nicht an mich oder Dritte übertragen. Ausnahmen sind der Scan (siehe 2.6)
+    und das Freistellen vom Hintergrund (siehe gleich unten).
     Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO.
   </p>
   <p>
-    Beim Freistellen des Baums vom Hintergrund wird das Bild mit Apples Vision-Framework
-    ausschließlich auf deinem Gerät verarbeitet. Dabei wird nichts übertragen.
+    Damit ein Baum freigestellt – also ohne seinen Hintergrund – dargestellt werden kann, wird
+    das Bild an denselben Cloudflare Worker übertragen, der auch den Scan ausführt, und dort von
+    einem Bildsegmentierungs-Modell verarbeitet, das den Hintergrund durchsichtig macht. Vor dem
+    Versand wird es auf dem Gerät auf höchstens 1536 Pixel an der langen Kante verkleinert und als
+    JPEG neu kodiert; <strong>dabei gehen die EXIF-Daten der Kamera einschließlich etwaiger
+    GPS-Koordinaten verloren</strong>. Es werden keine weiteren Angaben mitgesendet.
+    <strong>Das Foto wird nicht dauerhaft gespeichert, nicht protokolliert und nicht zum
+    Training von Modellen verwendet</strong>; es besteht für die Dauer der Anfrage und wird
+    danach verworfen. Zurück kommt nur das freigestellte Bild, das wieder ausschließlich auf
+    deinem Gerät liegt.
+  </p>
+  <p>
+    Ohne Internetverbindung, bei einem Fehler oder wenn das Ergebnis die Qualitätsprüfung der App
+    nicht besteht, erfolgt das Freistellen wie zuvor ausschließlich auf deinem Gerät mit Apples
+    Vision-Framework. Dabei wird nichts übertragen.
+    Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO.
   </p>
 
   <h3>2.3 Lichtmesser</h3>
@@ -128,8 +143,10 @@ html:not(.js) .langbar { display: none; }
 
   <h3>2.4 Standort und Wettervorhersage (optional)</h3>
   <p>
-    Die wetterabhängige Anpassung der Gießabstände und die Frostwarnung sind standardmäßig
-    deaktiviert. Wenn du sie einschaltest und iOS die Ortungsfreigabe erteilst, ermittelt die App
+    Die wetterabhängige Anpassung der Gießabstände und die Frostwarnung setzen beide deine
+    Ortungsfreigabe voraus und tun ohne sie nichts. Solange du sie nicht erteilt hast, wird kein
+    Standort ermittelt und keine Vorhersage abgerufen; die Pflegeabstände richten sich dann allein
+    nach Art und Jahreszeit. Sobald du die Freigabe erteilt hast, ermittelt die App
     deinen ungefähren Standort mit bewusst reduzierter Genauigkeit
     (<code>kCLLocationAccuracyKilometer</code>, also etwa ein Kilometer) und ruft damit die
     Vorhersage bei <strong>Apple WeatherKit</strong> ab. Die Abfrage erfolgt höchstens alle sechs
@@ -140,8 +157,8 @@ html:not(.js) .langbar { display: none; }
     Der Standort geht dabei an Apple als Betreiber des Wetterdienstes; er wird
     <strong>nicht an mich übertragen</strong> und berührt meinen Server in keiner Weise. Auf dem
     Gerät wird er nur als zuletzt bekannter Wert vorgehalten und mit jeder Abfrage überschrieben.
-    Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung durch Aktivieren der Funktion und
-    Erteilen der iOS-Ortungsfreigabe). Du kannst die Ortungsfreigabe jederzeit in den
+    Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung durch Erteilen der
+    iOS-Ortungsfreigabe). Du kannst die Ortungsfreigabe jederzeit in den
     iOS-Einstellungen entziehen.
   </p>
 
@@ -258,7 +275,7 @@ html:not(.js) .langbar { display: none; }
     </tr>
     <tr>
       <td>Cloudflare, Inc. (USA) — Worker, Key-Value-Speicher und Bildmodell</td>
-      <td>Arterkennung und Zustandseinschätzung (2.6), Führung des Scan-Kontingents (2.5), Missbrauchsbremse (2.9)</td>
+      <td>Arterkennung und Zustandseinschätzung (2.6), Freistellen des Hintergrunds (2.2), Führung des Scan-Kontingents (2.5), Missbrauchsbremse (2.9)</td>
       <td>das übermittelte Foto (nur für die Dauer der Anfrage), technische Angaben zum Baum, die zufällige Installations-Kennung, Plattform, App-Version, Sprach- und Länderkennung, der Abo-Status, die IP-Adresse als kurzlebiger Zählschlüssel</td>
     </tr>
   </table>
@@ -277,8 +294,8 @@ html:not(.js) .langbar { display: none; }
     Der Datensatz zu deiner Installations-Kennung (2.5) wird gelöscht, wenn das Gerät den Dienst
     400 Tage lang nicht verwendet hat; er läuft automatisch ab. Die Scan-Zeitpunkte verfallen
     nach etwa 35 Tagen, der Fingerabdruck eines Bildes nach 30 Tagen, der Zählschlüssel der
-    Missbrauchsbremse nach wenigen Minuten. Ein zum Scan übermitteltes Foto wird nicht
-    gespeichert: Es besteht nur für die Dauer der Anfrage und wird danach verworfen; auch in
+    Missbrauchsbremse nach wenigen Minuten. Ein zum Scan oder zum Freistellen übermitteltes Foto
+    wird nicht gespeichert: Es besteht nur für die Dauer der Anfrage und wird danach verworfen; auch in
     Protokollen wird es nicht abgelegt. Bei RevenueCat gespeicherte Kaufinformationen werden für
     die Dauer des Abos und darüber hinaus im Rahmen der handels- und steuerrechtlichen Pflichten
     aufbewahrt.
@@ -324,15 +341,16 @@ html:not(.js) .langbar { display: none; }
 
 <section data-lang="en">
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 30 September 2026 · applies to the iOS app “Bonsai Tracker”</p>
+  <p class="updated">Last updated: 1 October 2026 · applies to the iOS app “Bonsai Tracker”</p>
 
   <div class="highlight">
     <strong>In short:</strong> your trees, your care journal and your photos stay on your device.
     There is no account, no advertising, no tracking and <strong>no usage analytics</strong> — not
     even anonymous counters. The only things that leave your device are: an approximate location
     for the optional weather forecast (to Apple), purchase information for subscription management
-    (to Apple and RevenueCat), and a photo you explicitly submit for a scan — it is processed for
-    the duration of the request and then discarded. The light meter only reads the camera's
+    (to Apple and RevenueCat), and photos of your trees — for a scan you explicitly ask for, and to
+    cut a tree out from its background. Both are processed for the duration of the request and
+    then discarded. The light meter only reads the camera's
     exposure; no image is produced.
   </div>
 
@@ -366,13 +384,24 @@ html:not(.js) .langbar { display: none; }
   <p>
     You can take photos or pick them from your library to attach to a tree or a journal entry.
     Access happens only after you grant it through iOS and only for the image you select. Photos
-    are stored in the app container and are not transmitted to me or to third parties. The single
-    exception is a photo you explicitly submit for a scan — see 2.6.
+    are stored in the app container and are not transmitted to me or to third parties. The
+    exceptions are the scan (see 2.6) and background removal (see just below).
     Legal basis: Art. 6(1)(b) GDPR.
   </p>
   <p>
-    Cutting the tree out from its background is done with Apple's Vision framework entirely on
-    your device. Nothing is transmitted.
+    To show a tree cut out — without its background — the image is sent to the same Cloudflare
+    Worker that runs the scan, where a segmentation model makes the background transparent.
+    Before it is sent, the image is downscaled on the device to at most 1536 pixels on the long
+    edge and re-encoded as JPEG; <strong>this discards the camera's EXIF data, including any GPS
+    coordinates</strong>. Nothing else is sent with it. <strong>The photo is not stored, not
+    logged and not used to train models</strong>; it exists for the duration of the request and
+    is discarded afterwards. Only the cut-out image comes back, and it lives on your device
+    alone.
+  </p>
+  <p>
+    With no connection, on an error, or when the result does not pass the app's quality check,
+    the cutout is made on your device with Apple's Vision framework, as before. Nothing is
+    transmitted then. Legal basis: Art. 6(1)(b) GDPR.
   </p>
 
   <h3>2.3 Light meter</h3>
@@ -385,8 +414,10 @@ html:not(.js) .langbar { display: none; }
 
   <h3>2.4 Location and weather forecast (optional)</h3>
   <p>
-    Weather-adjusted watering intervals and frost warnings are off by default. If you switch them
-    on and grant iOS location access, the app determines your approximate location at deliberately
+    Weather-adjusted watering intervals and frost warnings both depend on your location
+    permission and do nothing without it. Until you have granted it, no location is determined and
+    no forecast is requested; care intervals then follow species and season alone. Once you have
+    granted it, the app determines your approximate location at deliberately
     reduced accuracy (<code>kCLLocationAccuracyKilometer</code>, roughly one kilometre) and uses
     it to request a forecast from <strong>Apple WeatherKit</strong>. The request happens at most
     every six hours, and only when the device has moved more than ten kilometres or the cached
@@ -396,7 +427,7 @@ html:not(.js) .langbar { display: none; }
     The location goes to Apple as the operator of the weather service; it is
     <strong>not transmitted to me</strong> and never touches my server. On the device it is kept
     only as the last known value and overwritten with every request. Legal basis: Art. 6(1)(a)
-    GDPR (consent, given by enabling the feature and granting iOS location access). You can
+    GDPR (consent, given by granting iOS location access). You can
     withdraw location access at any time in iOS Settings.
   </p>
 
@@ -502,7 +533,7 @@ html:not(.js) .langbar { display: none; }
     </tr>
     <tr>
       <td>Cloudflare, Inc. (USA) — Worker, key-value store and vision model</td>
-      <td>Species identification and condition assessment (2.6), scan allowance (2.5), abuse brake (2.9)</td>
+      <td>Species identification and condition assessment (2.6), background removal (2.2), scan allowance (2.5), abuse brake (2.9)</td>
       <td>the submitted photo (for the duration of the request only), technical details about the tree, the random install identifier, platform, app version, language and country codes, subscription status, the IP address as a short-lived counter key</td>
     </tr>
   </table>
@@ -521,7 +552,7 @@ html:not(.js) .langbar { display: none; }
     The record for your install identifier (2.5) is deleted when the device has not used the
     service for 400 days; it expires automatically. Scan timestamps expire after about 35 days, an
     image fingerprint after 30 days, and the abuse brake's counter key after a few minutes. A photo
-    submitted for a scan is not stored: it exists only for the duration of the request and is
+    submitted for a scan or for background removal is not stored: it exists only for the duration of the request and is
     discarded afterwards; it is not written to logs either. Purchase information held by RevenueCat
     is retained for the term of the subscription and beyond that within commercial and tax
     retention obligations.
